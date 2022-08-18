@@ -1,4 +1,8 @@
 class ListsController < ApplicationController
+  def new
+    @list = List.new
+  end
+
   def index
     @lists = List.all
   end
@@ -7,8 +11,9 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
   end
 
-  def new
-    list = List.new(params[:list])
+  def create
+    list = List.new
     list.save
+    # if list.save...
   end
 end
