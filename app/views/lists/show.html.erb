@@ -10,6 +10,12 @@
 <br>
 <br>
 <br>
+<% if @list.photo.attached? %>
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
+<br>
+<br>
 <%= link_to "Back to all lists", lists_path %>
 <br>
 <br>
