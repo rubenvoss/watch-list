@@ -4,7 +4,6 @@
 <% @list.bookmarks.each do |bookmark| %>
 <br>
 <%= bookmark.comment %>
-<button>TODO: make button -> delete this bookmark from list</button>
 <%= link_to "Delete this Bookmark", bookmark_path(bookmark), data: { "turbo-method": :delete } %>
 
 <% end %>
