@@ -29,6 +29,9 @@ gem "jbuilder"
 
 gem "dotenv-rails", groups: [:development, :test]
 
+gem "cloudinary"
+
+
 
 # Gemfile
 # [...]
