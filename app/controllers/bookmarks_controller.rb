@@ -6,6 +6,8 @@ class BookmarksController < ApplicationController
     # return an HTML form for creating a new photo
   end
 
+
+
   def create
     # @movie = Movie.find(bookmark_params["movie_id"])
     @list = List.find(params[:list_id])
@@ -20,14 +22,14 @@ class BookmarksController < ApplicationController
     end
     # TODO: redirect to
     # @bookmark.list = list
-    raise
-
+    # raise
   end
 
-
   def destroy
-    bookmark = Bookmark.find[params[:id]]
+    bookmark = Bookmark.find(params[:id])
+    @list = bookmark.list
     bookmark.destroy
+    redirect_to list_path(@list)
   end
 
   private
