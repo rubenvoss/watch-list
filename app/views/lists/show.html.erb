@@ -3,7 +3,8 @@
 <h1>List Bookmarks:</h1>
 <% @list.bookmarks.each do |bookmark| %>
 <br>
-<%= bookmark.comment %>
+<p>comment: <%= bookmark.comment %></p>
+
 <%= link_to "Delete this Bookmark", bookmark_path(bookmark), data: { "turbo-method": :delete } %>
 
 <% end %>
